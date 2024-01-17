@@ -9,5 +9,5 @@ export default async function Write(request: NextApiRequest, response: NextApiRe
     content: request.body.content,
   },
   { writeConcern: { w: "majority" } });
-  response.status(300).json('/list');
+  response.status(302).redirect("/list");
 }
